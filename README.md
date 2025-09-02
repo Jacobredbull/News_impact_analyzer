@@ -33,8 +33,8 @@ Follow these steps to get the application running on your local machine.
 
 ## 1. Clone the Repository
 ```bash
-# git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
+# git clone https://github.com/Jacobredbull/News_impact_analyzer.git
+cd News_impact_analyzer
 ```
 ## 2. Install Dependencies
 
@@ -45,9 +45,11 @@ python -m venv .venv
 source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
 ```
 
-# Install all required packages from the requirements file
+### Install all required packages from the requirements file
+```python
 pip install -r requirements.txt
-3. Set Up API Keys
+```
+## 3. Set Up API Keys
 
 You need a NewsAPI.org key for this project.
 
@@ -57,19 +59,19 @@ Set the key as an environment variable named NEWS_API_KEY.
 
 If you plan to use OpenAI or Google Gemini, you will need to get their respective API keys and paste them into the input box in the app's sidebar.
 
-4. (Optional) Set Up Ollama
+## 4. (Optional) Set Up Ollama
 
 If you want to use a local model:
 
 Install Ollama.
 
-Pull a model from your command line, for example: ollama pull llama3
+Pull a model from your command line, for example: ollama pull llama3.1
 
-5. Create the Ticker Cache
+## 5. Create the Ticker Cache
 
 Before your first run, you must download the list of valid stock tickers. Run the validator script once from your terminal:
 
-Bash
-
+```Bash
 python ticker_validator.py
 This creates an all_tickers.txt file in your project directory.
+```
